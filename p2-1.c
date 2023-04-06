@@ -12,6 +12,7 @@ int main(void) {
 
     printf("[----- [김상수] [2018038078] -----]")
 
+    // input에 0 ~ 99 까지 넣기
     for(i=0; i < MAX_SIZE; i++) 
         input[i] = i;
 
@@ -42,6 +43,7 @@ int main(void) {
     printf("The sum is: %f\n\n", answer);
 }
 
+// list, list[0] 위치 출력 및 0~99까지 더한 값 반환(sum에 출력)
 float sum1(float list[], int n) {
     printf("list \t= %p\n", list);
     printf("&list \t= %p\n\n", &list);
@@ -55,6 +57,8 @@ float sum1(float list[], int n) {
     return tempsum;
 }
 
+// list, list[0] 위치 출력 및 0~99까지 더한 값 반환(sum에 출력)
+// 인데 배열이 아니라 포인터로 연산
 float sum2(float *list, int n) {
     printf("list \t= %p\n", list);
     printf("&list \t= %p\n\n", &list);
@@ -78,6 +82,6 @@ float sum3(int n, float *list) {
 
     for(i = 0; i < n; i++)
         tempsum += *(list + i); 
-        
+
     return tempsum;
 }
